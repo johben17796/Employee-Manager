@@ -34,7 +34,7 @@ export default class DB {
     // view all roles 
     getAllRoles() {
         return this.query(
-            "SELECT * FROM role"
+            "SELECT role.title AS Job Title, role.id, department.name AS Department Name, role.salary AS salary FROM role LEFT JOIN movies ON role.department_id = department.id;"
         );
     }
     // add a role 
