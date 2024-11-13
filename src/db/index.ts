@@ -15,7 +15,7 @@ export default class DB {
     // get all employees
     getAllEmployees() {
         return this.query(
-            "SELECT * FROM employee"
+            "SELECT employee.id, employee.first_name, employee.last_name FROM employee"
         );
     }
     // add employees
@@ -26,7 +26,7 @@ export default class DB {
         );
     }
     // update employee Role
-    updateEmployeeRoles(employee_id: number, role_id) {
+    updateEmployeeRoles(employee_id: number, role_id: number) {
         return this.query ("UPDATE employee SET role_id = $1 WHERE id = $2",
         [role_id, employee_id]
     );}

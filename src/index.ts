@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import DB from "./db/index.ts";
+import DB from "./db/index.js";
 
 const db = new DB();
 
@@ -92,6 +92,7 @@ async function addEmployee() {
         ])
     .then((answers) => {
         db.createEmployee(answers.firstname, answers.lastname, answers.roleid, answers.managerid)
+        return
 })
     }
 function updateEmployeeRole() {
@@ -139,6 +140,7 @@ async function addRole() {
     ])
 .then((answers) => {
     db.createRole(answers.title, answers.salary, answers.departmentID)
+    return
 })
 }
 function viewallDepartments() {
@@ -159,8 +161,9 @@ async function addDepartment() {
     }])
     .then((answers) => {
     db.createDepartment(answers.department)
+    return
 })
 }
 function quit() {
-    return
+    process.exit()
 }
