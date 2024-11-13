@@ -162,5 +162,5 @@ async function addDepartment() {
 })
 }
 function quit() {
-
+    return
 }
