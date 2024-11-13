@@ -19,7 +19,7 @@ Download the code and use npm i and then npm run start
 
 ## Usage
 
-Usage Information: Watch this video
+Usage Information: Watch this [video](https://drive.google.com/file/d/1yRAq7ZNujIGT9jM5pXLepkrkcoPkGkV2/view?usp=sharing) 
 
 ## Contributing
 
